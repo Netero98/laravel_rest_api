@@ -54,7 +54,7 @@ final class VehicleController extends Controller
             abort(HttpHelper::STATUS_SERVER_ERROR);
         }
 
-        return $vehicle;
+        return $vehicle->withoutRelations();
     }
 
     /**
