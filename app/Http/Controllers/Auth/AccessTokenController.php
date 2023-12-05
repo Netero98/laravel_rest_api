@@ -24,6 +24,8 @@ final class AccessTokenController extends Controller
             self::PARAM_TOKEN_NAME => 'required',
         ]);
 
+        $validator->validate();
+
         $controller = $this;
 
         $validator->after(static function($validator) use ($request, $controller) {

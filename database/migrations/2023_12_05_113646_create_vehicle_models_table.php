@@ -16,8 +16,8 @@ return new class extends Migration
 
             $table->foreignUuid('brand_id')
                 ->constrained('brands')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
 
             $table->string('name');
             $table->timestamps();

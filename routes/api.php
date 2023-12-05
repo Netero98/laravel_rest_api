@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\VehicleController;
 use App\Models\Brand;
 use App\Models\VehicleModel;
 use Illuminate\Http\Request;
@@ -69,4 +70,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/token/revoke-all', [AccessTokenController::class, 'revokeAll'])->name('revoke-all');
 
     Route::post('/token/revoke-current', [AccessTokenController::class, 'revokeCurrent'])->name('revoke-current');
+
+    Route::apiResource('/vehicles', VehicleController::class);
 });
