@@ -31,7 +31,7 @@ final class VehicleController extends Controller
 
         return Vehicle::query()->create(
             array_merge(
-                $request->validated(),
+                $request->input(),
                 [Vehicle::PROP_USER_ID => $request->user()->id]
             )
         );
