@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,12 @@ Route::middleware(['guest'])->group(function () {
 
     Route::post('/token', [AccessTokenController::class, 'create'])
         ->name('create-token');
+
+    Route::get('/brands', function () {
+        return Brand::all();
+    });
+
+
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
