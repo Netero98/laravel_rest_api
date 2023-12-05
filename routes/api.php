@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Models\Brand;
+use App\Models\VehicleModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +46,9 @@ Route::middleware(['guest'])->group(function () {
         return Brand::all();
     });
 
-
+    Route::get('/vehicle-models', function () {
+        return VehicleModel::all();
+    });
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
