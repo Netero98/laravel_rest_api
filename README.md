@@ -1,2 +1,4 @@
-# What is it
-This is rest api made as part of my employment trial. Task is described in task.txt file.
+ ## What I used
+- PHP 8.1
+- Laravel 10
+- Laravel Breeze (API starter kit with Sanctum token authentication)
