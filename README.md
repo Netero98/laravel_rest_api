@@ -3,7 +3,7 @@
 
 ## How to test some API methods
 1. Get all vehicle models (public):
-curl \
+- curl \
    -X GET \
    -H "Content-Type: application/json" \
    -H "Accept: application/json" \
