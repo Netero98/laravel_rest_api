@@ -1,5 +1,5 @@
 init: init-normal
-init-normal: add-or-pass-env down up app-key-gen composer-i migrate-fresh seed
+init-normal: add-or-pass-env down up composer-i app-key-gen migrate-fresh seed
 
 add-or-pass-env:
 	cp -n .env.example .env
