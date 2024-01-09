@@ -1,5 +1,5 @@
 ## How to setup local environment via docker
-1. make init
+1. make init  
 If something is wrong, init again
 
 ## How to test some API methods
