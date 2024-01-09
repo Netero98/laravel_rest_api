@@ -1,5 +1,6 @@
 init: init-solved-bug
-init-solved-bug: add-or-pass-env down up composer-i migrate-fresh seed app-key-gen down up
+init-solved-bug: init-normal down up
+init-normal: add-or-pass-env down up composer-i migrate-fresh seed app-key-gen
 
 add-or-pass-env:
 	cp -n .env.example .env
