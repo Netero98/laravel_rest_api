@@ -1,5 +1,6 @@
 ## How to setup local environment via docker
 1. make init
+2. If something is wrong, init again
 
 ## How to test some API methods
 1. Get all vehicle models (public):  
